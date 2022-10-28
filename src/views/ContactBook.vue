@@ -15,7 +15,10 @@
         />
         <p v-else>Không có liên hệ nào.</p>
         <div class="mt-3 row justify-content-around align-items-center">
-          <button class="btn btn-sm btn-primary" @click="refreshList()">
+          <button 
+          class="btn btn-sm btn-primary" 
+          @click="refreshList()"
+          >
             <i class="fas fa-redo" /> Làm mới
           </button>
           <button class="btn btn-sm btn-success" @click="goToAddContact">
@@ -33,7 +36,7 @@
             <i class="fas fa-address-card" />
           </h4>
           <ContactCard :contact="activeContact" />
-          <router-link
+          <!-- <router-link
             :to="{
               name: 'contact.edit',
               params: { id: activeContact.id },
@@ -42,7 +45,7 @@
             <span class="mt-2 badge badge-warning">
               <i class="fas fa-edit" /> Hiệu chỉnh</span
             >
-          </router-link>
+          </router-link> -->
         </div>
       </div>
     </div>
@@ -59,7 +62,7 @@
       InputSearch,
       ContactList,
     },
-    // The full code will be presented below
+    //The full code will be presented below
     data() {
       return {
         contacts: [],
